@@ -1,11 +1,6 @@
 #
 # This is a Shiny web application. You can run the application by clicking
 # the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
 
 library(shiny)
 library(shinythemes)
@@ -74,7 +69,7 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
        
         data <- `Sub-Type` %>% 
           filter(`Sub-Type`  == input$Sub)
-        #select(sex) %>%  filter(!is.na(`Sub-Type` ), 
+        #select() %>%  filter(!is.na(`Sub-Type` ), 
       }
       if (input$Type != "All") {
         data <- data[data$DrugType  == input$Type,]
